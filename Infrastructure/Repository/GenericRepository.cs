@@ -22,7 +22,7 @@ namespace Infrastructure.Repository
            await table.AddAsync(entity);
         }
 
-        public async Task<T> GetById(object id)
+        public async Task<T> GetById(Guid id)
         {
            return await _context.FindAsync<T>(id);
         }
@@ -32,7 +32,7 @@ namespace Infrastructure.Repository
             return await table.ToListAsync();
         }
 
-        public async Task Remove(object id)
+        public async Task Remove(Guid id)
         {
             T existing = await GetById(id);
             table.Remove(existing);

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Core.Interfaces
@@ -7,12 +8,12 @@ namespace Core.Interfaces
     {
         Task<IEnumerable<T>> GettAll();
 
-        Task<T> GetById(object id);
+        Task<T> GetById(Guid id);
 
         Task Add(T entity);
 
         void Update(T entity);
 
-        Task Remove(object id);
+        Task Remove(Guid id);
     }
 }
