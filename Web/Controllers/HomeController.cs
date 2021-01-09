@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿using Core.Domain;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
